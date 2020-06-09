@@ -1,0 +1,98 @@
+body{
+  background-color: black;
+}
+
+#bg{
+  background-color: rgb(253, 124, 146);
+  padding-top: 60px;
+  padding-bottom: 500px;
+  margin-right: 500px;
+  margin-left: 500px;
+  background: linear-gradient(-95deg,rgb(253, 124, 146), rgb(231, 183, 191));
+
+}
+
+.all-btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 575px;
+  width: 460px;
+  border-radius: 6%;
+  padding-bottom: 30px;
+  grid-gap: 0.1em;
+  margin-left: 250px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color:rgb(56, 51, 51);
+  margin-top: 100px;
+  box-shadow: 130px 10px 10px 10px rgba(28,25,28,.40);
+  background: linear-gradient(-95deg, black, gray);
+  color: #333;
+ 
+}
+
+
+
+#screen {
+  grid-column-start: 1;
+  grid-column-end:   5;
+  border-radius: 10%;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-left:7px;
+  background-color: rgb(131, 192, 131);
+  background: linear-gradient(-95deg,rgb(124, 214, 124), rgb(226, 248, 226));
+
+}
+
+
+
+#zero {
+  grid-column-start: 1;
+  grid-column-end:   3;
+  height: 90%;
+  margin-bottom: 40px;
+  width: 222px;
+
+}
+
+
+
+
+.btn {
+  height: 75%;
+  width: 95%;
+  margin-top: 10px;
+  font: bold;
+  color: azure;
+  background-color: rgb(94, 102, 105);
+  background: linear-gradient(-95deg,rgb(46, 51, 53), rgb(143, 148, 150));
+  font-size: 40px;
+ 
+}
+
+#del{
+  height: 90%;
+  margin-bottom: 30px; 
+}
+
+
+#top{
+  background-color: black;
+  border: 1px solid black;
+  background: linear-gradient(-95deg, black, gray);
+
+}
+
+#equal {
+  grid-column-start: 4;
+  grid-row-start: 5;
+  grid-row-end:   8;
+  background-color: rgb(243, 92, 36);
+  background: linear-gradient(-95deg,rgb(243, 92, 36), rgb(236, 171, 147));
+  height: 175px;
+  margin-left: 0px;
+}
+
+
