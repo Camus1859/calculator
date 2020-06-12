@@ -41,8 +41,10 @@ body{
   margin-top: 30px;
   margin-bottom: 100px;
   margin-left:7px;
-  background-color: rgb(131, 192, 131);
+  background-color: rgb(32, 36, 32);
   background: linear-gradient(-95deg,rgb(124, 214, 124), rgb(226, 248, 226));
+  height: 100px;
+  margin-bottom: 5px;
 
 }
 
@@ -82,6 +84,7 @@ body{
   background-color: black;
   border: 1px solid black;
   background: linear-gradient(-95deg, black, gray);
+  
 
 }
 
