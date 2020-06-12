@@ -25,7 +25,10 @@ let number = []
 let digits = document.querySelectorAll(".digits");
 let operators = document.querySelectorAll(".operators")
 let screenLength;
-let equal = document.querySelectorAll("#equal")
+let equal = document.querySelectorAll(".equal")
+let prevNumOnScreen = 0
+let currentNUmOnScreen = 0
+let displayValue = 0
 
 digits.forEach(element => {
   element.addEventListener("click", digitOnScreen) 
@@ -54,7 +57,10 @@ operators.forEach(element => {
   element.addEventListener("click", function (e){
     if (screenLength > 0) {
 
-    let numbersOnScreen = displayValue
+    oper = (e.target.classList[1])
+
+  }
+    prevNumOnScreen = displayValue
 
     document.getElementById('screen').textContent =  Number(allDigits) * 0
     
@@ -62,29 +68,41 @@ operators.forEach(element => {
 
 
 
-    if (e.target.classList[1] == "add") {
 
-    let adding = e.target.classList[1]
-    }
-    else if (e.target.classList[1] == "subtract") {
+    equal.forEach(element => {
+    element.addEventListener("click", function (e){
 
-    let subtracting = e.target.classList[1]
-    }
-    else if (e.target.classList[1]== "multiply") {
+      allDigits = 0
 
-    let multiplying = e.target.classList[1]
-    }
-    else if (e.target.classList[1] == "divide") {
-      let dividing = e.target.classList[1]
-    }
 
-    }
+     currentNUmOnScreen = displayValue
+    
 
-    // equal.addEventListener("click", function (e){
+     if (oper == "add") {
 
-    // })
-  })
-})
+
+     total  = document.getElementById('screen').textContent =  add(currentNUmOnScreen, prevNumOnScreen)
+     console.log(total)
+
+
+
+      }
+      else if (e.target.classList[1] == "subtract") {
+  
+      let subtracting = e.target.classList[1]
+      }
+      else if (e.target.classList[1]== "multiply") {
+  
+      let multiplying = e.target.classList[1]
+      }
+      else if (e.target.classList[1] == "divide") {
+        let dividing = e.target.classList[1]
+      } 
+    })})
+
+ 
+
+  })})
 
     //  if(operaate == "add"){
     //    operaate = add()
@@ -112,3 +130,20 @@ operators.forEach(element => {
 // });
     
 // e.target.classList[1] == "add" || e.target.classList[1] == "subtract" || e.target.classList[1] == "divide"  || e.target.classList[1] == "multiply" && 
+
+
+    // if (e.target.classList[1] == "add") {
+
+    // let adding = e.target.classList[1]
+    // }
+    // else if (e.target.classList[1] == "subtract") {
+
+    // let subtracting = e.target.classList[1]
+    // }
+    // else if (e.target.classList[1]== "multiply") {
+
+    // let multiplying = e.target.classList[1]
+    // }
+    // else if (e.target.classList[1] == "divide") {
+    //   let dividing = e.target.classList[1]
+    // }
