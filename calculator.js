@@ -4,20 +4,19 @@ function add(x, y) {
 
 function subtract(x, y){
   return x - y
-}
+};
 
 function multiply(x, y) {
   return x * y
-}
+};
 
 function divide(){
   return x / y
-}
+};
 
 function operate(operator, x, y) {
-
   return operator(x, y)
-}
+};
 
 let screen = document.querySelectorAll(".screen")
 let allDigits = ""
@@ -72,7 +71,6 @@ operators.forEach(element => {
         else if (operating == "divide") {
           total = document.getElementById('screen')
           total.textContent =  divide(currentNUmOnScreen, prevNumOnScreen)
-
         } 
       }) 
   })
@@ -83,5 +81,3 @@ operators.forEach(element => {
 
 
 
-
-    
