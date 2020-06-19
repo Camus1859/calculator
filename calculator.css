@@ -4,7 +4,7 @@ body{
 
 #bg{
   background-color: rgb(253, 124, 146);
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 500px;
   margin-right: 500px;
   margin-left: 500px;
@@ -21,7 +21,7 @@ body{
   border-radius: 6%;
   padding-bottom: 30px;
   grid-gap: 0.1em;
-  margin-left: 250px;
+  margin-left: 425px;
   padding-left: 25px;
   padding-right: 25px;
   background-color:rgb(56, 51, 51);

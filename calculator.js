@@ -30,8 +30,9 @@ function multiply(x, y){
 };
 
 function divide(y, x){
-  return y / x
-};
+
+    return  (x) / (y)
+  }
 
 function operate(operator, x, y){
   return operator(x, y)
@@ -42,8 +43,13 @@ function subtractB(y, x){
 };
 
 function divideB(y, x){
-  return  (x) / (y)
-};
+  if (y == 0){
+    allClicksArray = [] 
+    stackB = []
+    return "Cant divide by zero"
+  }
+    return  (x) / (y)
+  }
 
 function precedence (operator){
   switch(operator){
@@ -57,20 +63,18 @@ function precedence (operator){
     return 0;
   }
 }
-function allCode(){
 digits.forEach(element => {
   element.addEventListener("click", digitOnScreen) 
-   function digitOnScreen() { 
+  function digitOnScreen() { 
       digitClicked = (element.textContent)
       allClicksArray.push(Number(digitClicked))
-
       allDigits = allDigits + digitClicked
       displayValue = document.getElementById('screen')
       displayValue.textContent =  Number(allDigits)
       screenLengthArray = []
       screenLengthArray.push(displayValue)
       document.getElementById("screen").style.color = "black"
-   }
+  }
 })
 
 operators.forEach(element => {
@@ -84,7 +88,6 @@ operators.forEach(element => {
   })
 })
 
-
 equal.addEventListener("click", function (e){
   currentNUmOnScreen = Number(allDigits)
   clicksArrToStr = allClicksArray.join("")
@@ -93,7 +96,6 @@ equal.addEventListener("click", function (e){
   let computeStr = spacedStr
   let x = computeStr
   numbersAB = x.split(" ")
-
 
 
   for (let i = 0; i < numbersAB.length; i++) {
@@ -139,42 +141,33 @@ equal.addEventListener("click", function (e){
       }
     }
   }
+  
   displayValue.textContent =  stackB    
   console.log(stackB)
 }) 
-}   
+
 
  
-
 AC.addEventListener("click", function(e){
-
-
-displayValue.textContent = 0
-allDigits = 0
-allClicksArray = []
-stack = []
-stackB = []
-newNum = stackB * 0
-numbersB = finalExpression * 0
-numbersAB = numbersAB * 0
-allDigits = ""
-prevNumOnScreen = 0
-currentNUmOnScreen = 0
-displayValue = 0
-allClicksArray = []
-screenLengthArray = []
-stackB = [];
-stack = [];
-finalExpression = []
-
-
-
-
-
-
+  displayValue.textContent = 0
+  allDigits = 0
+  allClicksArray = []
+  stack = []
+  stackB = []
+  newNum = stackB * 0
+  numbersB = finalExpression * 0
+  numbersAB = numbersAB * 0
+  allDigits = ""
+  prevNumOnScreen = 0
+  currentNUmOnScreen = 0
+  displayValue = 0
+  allClicksArray = []
+  screenLengthArray = []
+  stackB = [];
+  stack = [];
+  finalExpression = []
 })
       
-allCode()
     
 
         
